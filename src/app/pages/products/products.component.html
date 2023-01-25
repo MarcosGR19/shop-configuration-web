@@ -1,0 +1,23 @@
+<div class="main">
+    <div class="container">
+        <div class="container__title-fields">
+            <h2 class="title">Listado de productos ({{productList.length}})</h2>
+            <div class="container__title-fields__buttons">
+                <button class="container__title-fields__button">
+                    <img width="18" src="https://www.pngkey.com/png/full/30-303853_hamburger-menu-icon-menu-button-three-lines.png">
+                </button>
+                <button class="container__title-fields__button">
+                    <img width="18" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///8AAADq6uq6urqEhIR/f38jIyP6+vqvr6/X19fKyspvb2/BwcGRkZE8PDyUlJTd3d3k5ORgYGDv7++KioqmpqY7OzshISHR0dEyMjJSUlIqKipDQ0N2dna1tbVra2t4gxylAAAEyUlEQVR4nO2da3OqMBRFDVheokKR+qi2//9f3jpygEAQq/swd+heH8OQM4uEgKDbxYIQQqYnjxMfQxpn4QMFwyxOQRWTOBurdlgeDZJglY5UTFcBtOJxebhTLTtBi90IkjsVE6zejdPgQG4Vql1ZDc3VcKVUceuup1XOmHPhLFic1SquphX8OTmchp+KFR2KWlP0xrtD8F21Ym+iZqrljIl6gpFyxe5y06yil9RDkezqXoPuahM2q+guQRXM00vd68mud5D2Y+48ZZ4lrKdi2dlSyob3R+4KHievL+j2dXEpgtBqV2QBO3faZR39hlcUxaWzFTuCV8J91bV9xSiq1j12BK/krtGSxgu8XDMdfavVH5i8CORcbA9XXLWN3UQ+g1f1ba+mspJ6ChXTqu+41ZYo1ltUfdsXKLn8ahSUY9q+IfYnMLRP/LcJDNvnBQ1fgoZwaAiHhnBoCIeGcGgIh4ZwaAiHhnBoCIeGcGgIh4ZwaAiHhnBoCIeGcGgIh4ZwaAiHhnBoCIeGcGgIh4ZwaAiHhnBoCIeGcGgIh4ZwaAiHhnBoCIeGcGgIh4ZwaAiHhnBoCIeGcGgIh4ZwaAiHhnD+pmE6geHaatxNYNjOT5BMhXuhVc8SVn27MxXwsRhNfkI7U0Hyd3YK9eQMsHMxvpytGGR+tDN46jgchUO6qbq2Y1Mka2SDLyiTxg79kRQZV57Ta0gARtBpl2M6EDz2AhL6Y4dhyVJjvsGjWAdsrTsb1kMbXqTJgOsEtdSpTfsSt6CGvkzR/jLt1Vs2Pu6oeqUE/vQmTWJ06U9G3fg0x3VBM5DuZ5z6wxR+qFbsR9KFehF/xn0r4Y3v9jyOQ7ooFEP+4n65RXOfocCnO6lRK+bvY2jt8rQm6uBFL9JIEzXb4aUyVFlu9v0Iw6ZiiT4bg/X9i4+3Rh/Vczly8Sn8aLvEsI78RxLucj9agypuI999AhJCCCGEEEKm5vrZ4g3DLvp66LPFV7QDVRz/bDH7z4ez/4yv9Zxm8588p5n9s7b5Py+d/TPv+b+3aL17wj2tmv7dU1HWIp13T/X7w8H/ZnqS8feH4FekQ+8PZ/8OeP7v8ef/XYz5f59m/t+Jmv/32mj4EjSEQ0M4NIRDQzg0hENDODSEQ0M4NIRDQzg0hENDODSEQ0M4NIRDQzg0hENDODSEQ0M4NIRDQzg0hENDODSEQ0M4NIRDQzg0hENDODSEQ0M4NIRDQzg0hENDODSEQ0M4NIRDQzg0hENDODSEQ0M4NITzNw3lN/qPRHP9mqpvOwBjO4FhOz9BMhXSwb1er+fOVNCYNZKf4PqPkotCvdIxZ5rzolSoeKn6budiLI5q0zSUv2Owg32KqnWPD8aQ2JSj1bp0tiKQ5Jtzp11CXfr/YfAqkj9lL20HI4rYUQzrDLjudJTJa96xo5jLdDQHe8NJ2s0lzT0Qya7utTcb69lrzC5BFczTS93rqVMwM7r0g/6i8Z1eIusW1A0Xc+VPaYUY3nDkT2lG0n06TxnFGEPz7Sqop7hxR8AVm/Fdn8QpqDdRBzPgQq2DOhiRlp3Gd/41wb14rUQjMfXUW2RaHJbH8R5+QbAau9VNV1jJ4/IwUnGRx4mPIY2zR67mYRanoIpJfG/4CCFEi3/sJFYJ+3SwvAAAAABJRU5ErkJggg=="/>
+                </button>
+            </div>
+        </div>
+        <div class="container__search">
+            <input type="text" placeholder="Buscador">
+        </div>
+        <div class="container__catalog">
+            <div *ngFor="let product of productList">
+                <app-card class="card" [product]="product"></app-card>
+            </div>
+        </div>
+    </div>
+</div>

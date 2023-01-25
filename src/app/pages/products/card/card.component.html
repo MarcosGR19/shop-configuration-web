@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card__cont--img">
+        <img src="{{product.image}}"/>
+    </div>
+    <div class="card__cont--title">
+        <h3>{{product.name}}</h3>
+    </div>
+    <div class="card__cont--price">
+        <p>$ {{product.price}}</p>
+    </div>
+    <div class="card__cont--info">
+        <p>{{product.description}}</p>
+    </div>
+    <div class="card__cont--star">
+        <app-stars [stars]="starPerc"></app-stars>
+        <span>{{product?.opinions || '4.28'}}</span>
+        <button routerLink="/edit-item/{{product.id}}" >Editar</button>
+    </div>
+</div>

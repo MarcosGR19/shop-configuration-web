@@ -1,0 +1,42 @@
+<div class="main">
+    <div class="container">
+        <h2>Creación/edición de productos</h2>
+        <div class="container-subcontainer">
+            <form *ngIf="isLoaded" [formGroup]="form" (ngSubmit)="onSave()">
+                <label>Nombre del producto:</label>
+                <input formControlName="name" placeholder="Por ej: Balón de Futbol Nike La Liga Santander 17/18"/>
+                <label>Precio:</label>
+                <input formControlName="price" placeholder="Por ej: 9.50"/>
+                <label>Descripción:</label>
+                <input formControlName="description" placeholder="Por ej: Recibelo en un plazo de 2-3 días laborables"/>
+                <label>Ruta de la imagen:</label>
+                <input formControlName="image" placeholder="Por ej: http://blabla.com/img.jpg"/>
+                <label>Opiniones</label>
+                <input formControlName="stars" placeholder="Por ej: 4.28"/>
+                <button type="submit">Guardar</button>
+            </form>
+            <div class="line"></div>
+            <div class="container__preview">
+                <p>Preview del producto:</p>
+                <div class="card">
+                    <div class="card__cont--img">
+                        <img src="{{product?.image || 'https://www.ofertasdepadel.com/23092-thickbox_default/balon-de-futbol-nike-la-liga-santander.jpg'}}"/>
+                    </div>
+                    <div class="card__cont--title">
+                        <h3>{{product?.name || 'Balón de Futbol Nike La Liga Santander 17/18'}}</h3>
+                    </div>
+                    <div class="card__cont--price">
+                        <p>$ {{product?.price || 9.50}}</p>
+                    </div>
+                    <div class="card__cont--info">
+                        <p>{{product?.decription || 'Recibelo en un plazo de 2-3 días laborables'}}</p>
+                    </div>
+                    <div class="card__cont--star">
+                        <app-stars [stars]="starPerc"></app-stars>
+                        <span>{{product?.stars || '4.28'}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
