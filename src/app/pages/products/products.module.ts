@@ -5,10 +5,11 @@ import { CommonModule } from '@angular/common';
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products.component';
 import { CardComponent } from './card/card.component';
+import { ListComponent } from './list/list.component';
 
 
 @NgModule({
-  declarations: [ProductsComponent, CardComponent],
+  declarations: [ProductsComponent, CardComponent, ListComponent],
   imports: [
     CommonModule,
     ProductsRoutingModule,

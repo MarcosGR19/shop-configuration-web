@@ -11,10 +11,24 @@ export class ProductsComponent implements OnInit{
 
   public productList:any[] = [];
 
+  public listMode:boolean=false;
+
   ngOnInit(): void {
 
     this.productService.getProducts().subscribe((res:any)=>{
       this.productList = res;
+      for(let product of this.productList){
+        product.starPerc = product.stars*100/5 + '%'
+      }
+      console.log(this.productList)
     });
+  }
+
+  changeToListMode():void{
+    this.listMode=true;
+  }
+
+  changeToCatalogMode():void{
+    this.listMode=false;
   }
 }
