@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="container__search">
-            <input type="text" placeholder="Buscador">
+            <input type="text" placeholder="Buscador"  [(ngModel)]="inputText" (ngModelChange)="searchValue(inputText)">
         </div>
         <app-list *ngIf="listMode" [productList]="productList"></app-list>
         <div *ngIf="!listMode" class="container__catalog">

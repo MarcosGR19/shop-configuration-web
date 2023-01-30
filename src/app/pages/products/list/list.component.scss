@@ -1,6 +1,6 @@
 .grid-container{
     display: grid;
-    grid-template-columns: 2fr 3fr 1fr  1fr 0.3fr 1fr; /* Create 2 columns and auto-place rows */
+    grid-template-columns: 1fr 2fr 3fr 1fr  1fr 0.3fr 1fr; /* Create 2 columns and auto-place rows */
     justify-items: center;
     column-gap: 1px;
     margin-top: 10px;
@@ -13,6 +13,11 @@
     background-color: #33333383;
     grid-column-start: 1;
     grid-column-end: 12;
+}
+
+.image{
+    width: 50px;
+    height: 40px;
 }
 
 .name{
@@ -72,4 +77,6 @@ button{
 
 .title{
     font-weight: 800;
+    align-self: center;
+    height: auto;
 }
